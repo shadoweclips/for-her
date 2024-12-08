@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+   const images = ['./Snapchat-210937027.jpg', './Snapchat-52972775.jpg', './Snapchat-888739681.jpg'];
+   let currentImageIndex = 0;
+   
+   function openBirthdayPage() {
+     document.getElementById('mainPage').style.display = 'none';
+     document.getElementById('surprisePage').style.display = 'block';
+   }
+
+   function changeImage() {
+     const imageElement = document.getElementById('birthdayImage');
+     currentImageIndex = (currentImageIndex + 1) % images.length;
+     imageElement.src = images[currentImageIndex];
+     imageElement.classList.add('fade');
+     setTimeout(() => {
+       imageElement.classList.remove('fade');
+     }, 500);
+   }
+
+   document.addEventListener('DOMContentLoaded', () => {
+     const imageElement = document.getElementById('birthdayImage');
+     imageElement.style.objectFit = 'cover';
+     imageElement.style.width = '100%';
+     imageElement.style.height = '100%';
+     setInterval(changeImage, 3000);
+     document.getElementById('surprisePage').style.display = 'none';
+   });
+  </script>
+ </head>
+ <body>
+  <div id="mainPage" class="container">
+   <div class="content">
+    <div class="text">
+     <h1>
+      HAPPY BIRTHDAY
+     </h1>
+     <h2>
+      TO YOU
+     </h2>
+     <button class="button" onclick="openBirthdayPage()">
+      CLICK HERE FOR YOUR SURPRISE! 🎉🎂
+     </button>
+    </div>
+    <div class="image">
+     <img alt="Birthday celebration" id="birthdayImage" src="./Snapchat-210937027.jpg" style="object-fit: cover; width: 100%; height: 100%;"/>
+    </div>
+   </div>
+   <div class="decorations">
+    <div class="circle small"></div>
+    <div class="circle large"></div>
+    <i class="fas fa-star star small"></i>
+    <i class="fas fa-star star large"></i>
+    <div class="line horizontal"></div>
+    <div class="line vertical"></div>
+    <i class="fas fa-birthday-cake star large"></i>
+    <i class="fas fa-gift star small"></i>
+    <i class="fas fa-heart star small"></i>
+   </div>
+  </div>
+
+  <div id="surprisePage" style="display: none;">
+    <div id="message">
+        <h1>✨🌹 My Love, Ana 🌹✨</h1>
+        <p>🎂 Happy birthday, my precious girl. Today isn't just a day—it's the day that brought you into this world, and for that, I'm endlessly grateful. I don't even know where to start because words feel so small compared to how much you mean to me. <span>💖</span></p>
+
+        <p>🌟 Like morning sunlight breaking through clouds,<br>
+        Your presence brightens my darkest days.<br>
+        Every smile you share, every word you speak,<br>
+        Makes my heart dance in countless ways. <span>🌹</span></p>
+
+        <p>You are my everything. You make me smile when life feels heavy, and even from so far away, your love makes me feel like the luckiest man alive. I think about you every day—your laugh, your kindness, the way you always make me feel cared for. You're the light in my life, Ana, and without you, the world would feel so much dimmer. <span>🌟</span></p>
+
+        <p>✨ In every heartbeat, in every dream,<br>
+        Your love flows like a gentle stream.<br>
+        Distance may keep us apart for now,<br>
+        But my heart to yours makes a solemn vow. <span>💫</span></p>
+
+        <p>🤗 I wish I could be there with you right now, holding your hand, looking into your eyes, and telling you how much I love you. I'd do anything to see your smile today, the one that makes my heart feel like it could burst. I want you to feel loved, cherished, and celebrated—not just today but every single day of your life. <span>❤️</span></p>
+
+        <p>🎀 Ana, you're more than just my girlfriend. You're my safe place, my biggest dream, and my forever. I promise I'll always do my best to make you feel as special as you truly are. I love you, more than words could ever say. <span>🥰</span></p>
+
+        <p>🌺 Like stars that guide sailors home,<br>
+        Your love guides me wherever I roam.<br>
+        In this vast world so wide and free,<br>
+        You're the only home I'll ever need. <span>🦋</span></p>
+
+        <p>✨ Happy birthday, my precious love! I'm yours, always and forever! 🎉</p>
+
+        <p>Each birthday of yours reminds me how blessed I am to have you in my life. May this year bring you endless joy, countless smiles, and all the happiness you deserve. These past three months have been the most amazing start to our journey together, and I can't wait to celebrate the new year and many more special moments with you. You're my today, my tomorrow, and my always. <span>💫</span></p>
+
+        <p>With all my love,<br>
+        Kaiden <span>💝</span></p>
+
+  <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        font-family: 'Montserrat', sans-serif;
+        color: #333;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    #message {
+        width: 90%;
+        max-width: 800px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(10px);
+        transform: translateY(0);
+        transition: all 0.3s ease;
+        margin: 10px auto;
+    }
+
+    @media (min-width: 768px) {
+        #message {
+            padding: 40px;
+        }
+    }
+
+    #message:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        color: #e73c7e;
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 4em;
+            margin-bottom: 30px;
+        }
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #444;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    @media (min-width: 768px) {
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 0 20px;
+            text-align: justify;
+        }
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    p span {
+        display: inline-block;
+        animation: bounce 1s ease infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+  </style>
+ </body>
+</html>

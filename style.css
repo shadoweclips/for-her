@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Arial, sans-serif';
+    background-color: #f7d9e1;
+    animation: backgroundChange 3s infinite;
+}
+@keyframes backgroundChange {
+    0% {
+        background-color: #f7d9e1;
+    }
+    33% {
+        background-color: #b3e5fc;
+    }
+    66% {
+        background-color: #ffccbc;
+    }
+    100% {
+        background-color: #f7d9e1;
+    }
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #f7d9e1, #b3e5fc);
+}
+.content {
+    position: relative;
+    width: 80%;
+    height: 60%;
+    background-color: #f7d9e1;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.text {
+    text-align: center;
+}
+.text h1 {
+    font-size: 48px;
+    color: #333;
+    margin: 0;
+}
+.text h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+}
+.button {
+    background-color: #ff5e7e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #800080;
+}
+.image {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.decorations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.decorations .circle {
+    position: absolute;
+    background-color: #ff5e7e;
+    border-radius: 50%;
+}
+.decorations .circle.small {
+    width: 50px;
+    height: 50px;
+    top: 10%;
+    left: 10%;
+}
+.decorations .circle.large {
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    right: 10%;
+}
+.decorations .star {
+    position: absolute;
+    color: #333;
+}
+.decorations .star.small {
+    font-size: 24px;
+    top: 20%;
+    right: 20%;
+}
+.decorations .star.large {
+    font-size: 48px;
+    bottom: 20%;
+    left: 20%;
+}
+.decorations .line {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: #333;
+}
+.decorations .line.horizontal {
+    top: 30%;
+    left: 30%;
+}
+.decorations .line.vertical {
+    width: 5px;
+    height: 100px;
+    top: 40%;
+    right: 30%;
+}
